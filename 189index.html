@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <style>
+    .update-alert {
+      display: none;
+      padding: 15px;
+      background-color: #f8d7da;
+      color: #721c24;
+      border: 1px solid #f5c6cb;
+      border-radius: 4px;
+      margin-bottom: 15px;
+    }
+    .close-btn {
+      cursor: pointer;
+      float: right;
+      font-size: 20px;
+      font-weight: bold;
+    }
+  </style>
+</head>
+<body>
+  <div id="updateAlert" class="update-alert">
+    <span class="close-btn" onclick="closeAlert()">&times;</span>
+    <strong>Update:</strong> There is an update available! V1.8.9
+    <br>[+] Add Uploader
+    <br>[+] Improve Update Css
+    <br>[+] Thank you for using it until today!!
+    <br><a href="https://github.com/Mr-7Mind/MiniShell/blob/main/ShellPass.php">Update Here!!</a>
+  </div>
+  <script>
+    function closeAlert() {
+      document.getElementById('updateAlert').style.display = 'none';
+    }
+    window.onload = function() {
+      var updateAvailable = true;
+
+      if (updateAvailable) {
+        document.getElementById('updateAlert').style.display = 'block';
+      }
+    };
+  </script>
+</body>
+</html>
